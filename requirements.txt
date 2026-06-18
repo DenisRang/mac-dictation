@@ -1,0 +1,23 @@
+# Зависимости приложения «Диктовка».
+# mlx-whisper ставится отдельно с --no-deps (см. install.sh), чтобы НЕ тянуть
+# torch (~2 ГБ): при распознавании он не используется. Здесь — его реальные
+# нужные зависимости + библиотеки самого приложения.
+
+# ядро распознавания (зависимости mlx-whisper, кроме torch)
+mlx
+numba
+numpy
+scipy
+tiktoken
+huggingface_hub
+more-itertools
+tqdm
+
+# запись звука / буфер обмена / горячая клавиша / значок в меню / доступ к macOS
+sounddevice
+pyperclip
+pynput
+rumps
+pyobjc-framework-Quartz
+pyobjc-framework-Cocoa
+pyobjc-framework-ApplicationServices
